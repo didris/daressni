@@ -1,82 +1,162 @@
 <!DOCTYPE html>
-<html>
+<style>
+
+   * {
+    margin:0; padding:0; border:0 ;box-sizing:border-box;
+}
+   header{
+    background-color: white;
+     min-height: 50px;
+    display: flex; 
+  justify-content:right;
+  gap: 10px;
+  gap: 10px 10px; /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 30px;
+   }
+
+   main{
+    background-color: #678; min-height: 500px;
+    display:flex; flex-flow:row wrap;
+   }
+
+   aside:nth-child(1){
+    flex: 0 0 200px; background-color: white;
+   }
+
+   aside:nth-child(3){
+    flex: 0 0 250px; background-color:white;
+
+   }
+   article{
+    flex: 1 0 auto; background-color:rgb(195, 220, 240);
+    text-align: center;
+  margin: auto;
+  width: 650px;
+  height: 650px;
+  padding: 0.7em;
+
+
+   }
+   footer{background-color: white;
+     min-height: 70px;
+   }
+
+   .button1 {
+  background-color: #396cc9;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.button{
+    padding:12px 30px ;
+  width:40% ; 
+  margin-top:20px ; 
+  background-color: #396cc9;
+  color:white; 
+  font-weight: blod;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+ 
+}
+
+.textboxclass1 {
+height: 27px;
+width: 260px;
+}
+
+.textboxclass{padding: 12px ;
+  width:65% ;
+  margin :15px;
+  border : rgb(195, 220, 240); ;
+  outline : none; 
+  border-radius:20px; 
+  text-align: right;}
+
+.size_color1 {
+  font-size: 150%;
+  color: black;
+   text-align: center;
+}
+
+.size_color{
+padding: 12px ;
+  width:65% ;
+  margin :15px;
+  border :1px solid rgb(195, 220, 240);
+  outline : none; 
+  border-radius:20px; 
+  text-align: right;}
+
+.color { 
+  color: rgb(0, 0, 0);
+  font-size:small ;
+  text-decoration-color: #9cbcce;
+  text-align: right;
+
+}
+
+
+
+</style>
 <head>
+  
+  <link rel="stylesheet" type="text/css" href="signup_style.css">
 
-<div class="container">
-<div> <a href=""> الصفحة الرئيسية</a></div>
-<div><h1>درســــنـــــي</h1> </div>
-<div>
-<img src="logo.png" alt="logo" width="100" height="100">
-</div>
-
-
-</div>
-
-   <link rel="stylesheet" type="text/css" href="signup_style.css">
-
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>تسجيل طالب جديد</title>
-
-</head>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
+  <div class="header">
+    <header> <a href=""> الصفحة الرئيسية</a>
+   <h1>درسني</h1> 
+    <img src="logo.png" alt="logo" width="50" height="50"></header>
+    </div>
+    </head>
 <body>
+    <div id="container">
+    
+        <main>
+            <aside><img src="study.jpg" alt="study" width="400" height="300"></aside>
 
-<div class="flex-container">
+        <article>
+            <h1>تسجيل طالب جديد </h1> <br><br>
 
-<div>
-<img src="study.jpg" alt="study" width="400" height="300"> </div>
+<form >
 
-  <div>
-
-<div class="center">
-
-<h1>تسجيل طالب جديد </h1>
-
-<div class="size_color">
-<table class="tableclass">
-<form>
- <tr> <td>
-  <input type="text" class="textboxclass" id="fname" name="fname"></td>
- <td> <label for="fname">اسم الطالب</label></td></tr>
-
-<tr><td>
-  <input type="date" id="birthday" name="birthday" value="2010-06-01"></td>
-<td>  <label for="birthday">تاريخ الميلاد </label></td>
-</tr>
-
-<tr><td>
- <input type="email" class="textboxclass" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" name="email"></td>
- <td> <label for="email">البريد الإلكتروني</label> </td></tr>
-
-<tr><td>
-  <input type="password" class="textboxclass"  id="password" name="password" required></td>
- <td> <label for="password">كلمة المرور</label></td></tr>
-
-<tr><td>  
-  <input type="password" class="textboxclass"  id="repassword" name="repassword"></td>
-<td> <label for="repassword">تأكيد كلمة المرور</label></td></tr>
-</form></table>
-
-</div>
-  <input type="submit" class="button" value="تسجيل"></input>
+ <label for="fname" class="size_color">اسم الطالب</label><br>
+  <input type="text" class="textboxclass" id="fname" name="fname"><br><br>
 
 
-<p><a href="">لديك حساب؟ سجل الدخول</a></p>
+<label for="email" class="size_color">البريد الإلكتروني</label> <br>
+ <input type="email" class="textboxclass" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" name="email"><br>
+  <br>
+
+<label for="password" class="size_color">كلمة المرور</label><br>
+  <input type="password" class="textboxclass"  id="password" name="password" required><br>
+  <br>
+
+  <label for="repassword" class="size_color">تأكيد كلمة المرور</label><br>
+  <input type="password" class="textboxclass"  id="repassword" name="repassword"><br>
+ <br>
+
+  <input type="submit" class="button" value="تسجيل"></input><br> <br>
 
 
-
-</div>
-
-</div>
-
-<div>
-<img src="study2.jpg" alt="study" width="400" height="300">
-</div>
-</div>
-
-
+<p><a href="https://www.w3schools.com/" class="color">لديك حساب؟ سجل الدخول</a></p>
+</form>
+        </article>
+    <aside><img src="study2.jpg" alt="study" width="400" height="300"> </div></aside>
+</main>
+    <footer>footer</footer>
+    </div>
 </body>
 </html>
